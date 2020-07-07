@@ -185,6 +185,7 @@ weDataType = np.dtype([
 # end structure defs
 ########################################################
 
+
 def readInData(dataPath):
   inData = np.fromfile(dataPath + '/in_read',dtype=inDataType);
   return inData;
@@ -238,3 +239,20 @@ def loadIntVis(dataPath,inOffsetDict):
 
   visFile.close()
   return dataDict;
+
+def checkDataInteg(dataPath,checkVis=False):
+  checkResult = True
+  try:
+    _ = readInData(dataPath)
+    _ = readEngData(dataPath)
+    _ = readBlData(dataPath)
+    _ = readSpData(dataPath)
+    _ = readCodesData(dataPath)
+    _ = readWeData(dataPath)
+    if checkVis:
+      # do something more here
+      1+1
+  except:
+    checkResult = False
+  return checkResult
+
