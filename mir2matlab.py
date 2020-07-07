@@ -115,7 +115,7 @@ blDataType = np.dtype([
     ('spareint5', np.int32),
     ('spareint6', np.int32),
     ('sparedbl1', np.double),
-    ('spatedbl2', np.double),
+    ('sparedbl2', np.double),
     ('sparedbl3', np.double),
     ('sparedbl4', np.double),
     ('sparedbl5', np.double),
